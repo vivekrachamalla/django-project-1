@@ -1,0 +1,25 @@
+{% extends 'NISIInvoice/main.html' %}
+{% block content %}
+
+<div class="card mt-4">
+  <h5 class="card-header">Employee Details</h5>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-lg-6">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">First Name: {{employee.first_name}}</p>
+        <p class="card-text">Middle Name: {{employee.middle_name}}</p>
+        <p class="card-text">Last Name: {{employee.last_name}}</p>
+        <p class="card-text">H1b: {{employee.start_date}} to {{employee.end_date}}</p>
+
+      </div>
+      <div class="col-lg-6">
+        <h5 class="card-title">Contact Details</h5>
+        <p class="card-text">Last Name: {{employee.email_id}}</p>
+        <p class="card-text">Last Name: {{employee.phone_number}}</p>
+      </div>
+    </div>
+    <a href="{{list.id}}" class="btn btn-primary">Invoice</a>
+  </div>
+</div>
+{% endblock %}

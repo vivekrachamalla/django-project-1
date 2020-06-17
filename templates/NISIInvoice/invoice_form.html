@@ -1,0 +1,9 @@
+{% extends 'NISIInvoice/main.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form class="" method="post">
+  {% csrf_token %}
+  {{form|crispy}}
+  <input type="submit" name="submit" value="submit">
+</form>
+{% endblock %}
